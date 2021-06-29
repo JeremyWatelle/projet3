@@ -1,12 +1,13 @@
-@import "/1.Utils/variables.scss";
-@import "/1.Utils/fonctions.scss";
-@import "/1.Utils/mixin.scss";
-@import "";
-@import "";
-@import "";
+@import "1.Utils/variables.scss";
+@import "1.Utils/fonctions.scss";
+@import "1.Utils/mixin.scss";
 
 body {
   font-family: sans-serif;
 
   background-color: #F4FCF8;
+}
+
+img {
+  @include img--size;
 }

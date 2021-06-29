@@ -1,0 +1,11 @@
+@mixin btn { 
+    
+}
+
+@mixin img--size {
+    width:$sizeimage;
+    height: 400px;
+    object-fit: cover;
+
+}
+
