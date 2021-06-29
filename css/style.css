@@ -1,1 +1,12 @@
+body {
+  font-family: sans-serif;
+  background-color: #F4FCF8;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=style.css.map */
