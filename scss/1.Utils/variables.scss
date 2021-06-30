@@ -1,9 +1,13 @@
 $primary :#9356dc;
+$light-primary:rgb(245,237,255);
 $secondary: #ff79da;
 $tertiaire:#99e2d0;
+$grey:grey;
 
 $shrikhand: url(shrikhand-regular.ttf);
 $roboto: url(roboto-regular.ttf);
+
+$fontsize:0.9rem;
 
 $sizeimage: 100%;
 
@@ -11,4 +15,10 @@ $sizecontain30: 30%;
 $sizecontain22: 22.5%;
 
 $padding:5%;
+$paddingbtn:3.5%;
+$paddingsection:0px 20px 0px 20px;
+
+$widthdiv:100%;
+$radiusdiv:20px;
+$shadowdiv:2px 2px 8px grey;
 

@@ -4,32 +4,88 @@
 
 body {
   font-family: roboto, shrikhand;
-  background-color: #F4FCF8;
+  background-color: white;
   width:100%;
   margin:0;
 }
-
-section {
-  padding-left:5px;
-  padding-right:5px;
+h3{
+  font-size: $fontsize;
+}
+header{
+  background-color: #eeeeeebc;
+  font-size: $fontsize;
 }
 
 .title {
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom:5px;
+    @include title;
     img{
     width:50%;
     margin-left:25%;
     }
 }
-  
+
 .map {
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  @include map;
+    & p{
+      margin-left: 15px;
+    }
 }
 
+.reserve{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  .btn{
+    @include btn;
+  }
+  p{
+    align-items: center;
+  }
+}
+
+.fonction{
+  height:300px;
+  padding-top:20px;
+}
+.containmenu{
+  @include containmenu;
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+  margin-left: -50px;
+}
+
+.menuh3{
+  margin-left: -45px;
+}
+
+.menuh{
+  margin-left: -8px;
+}
+
+.menu{
+  @include menudiv;
+  i{
+    margin-left: 20px;
+    margin-right: 30px;
+    color:$grey;
+  }
+  p{
+    @include pcolor;
+  }
+  &:hover i{
+    color:$primary;
+  }
+  &:hover{
+    @include background-hover;
+  }
+}
+
+section{
+  @include section;
+}
 
 .resto img {
   @include img--size;

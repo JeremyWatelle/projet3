@@ -1,4 +1,10 @@
 @mixin btn { 
+    background-color: rgb(200,103,219);
+    border-radius: $radiusdiv;
+    padding: $paddingbtn;
+    color: white;
+    width: 60%;
+    border: none;
     
 }
 
@@ -15,6 +21,52 @@
 
 }
 
-@mixin div {
+@mixin title{
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom:5px;
+    border-bottom: 2px solid #D2D2D2;
+}
+@mixin map{
+    display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E2E2;
+  font-weight: bold;
+  margin-left:-20px;
+}
+
+@mixin containmenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:200px;
+}
+
+@mixin menudiv {
+    display: flex;
+    box-shadow: $shadowdiv;
+    border-radius: $radiusdiv;
+    align-items: center;
+    width: $widthdiv;
+    height: 55px;
+}
+
+@mixin background-hover{
+    background-color: $light-primary;
     
+}
+
+@mixin pcolor{
+    border-radius: $radiusdiv;
+    background-color: $primary;
+    padding:2px 6px 1px 6px;
+    overflow:hidden;
+    margin-left: -10px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+@mixin section{
+    padding:$paddingsection;
 }
