@@ -10,9 +10,10 @@
 
 @mixin img--size {
     width:$sizeimage;
-    height: 400px;
+    height: 150px;
     object-fit: cover;
-
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 @mixin padding{
@@ -31,7 +32,7 @@
     display:flex;
   align-items: center;
   justify-content: center;
-  background-color: #E2E2E2;
+  background-color: rgb(234,234,234);
   font-weight: bold;
   margin-left:-20px;
 }
@@ -69,4 +70,46 @@
 
 @mixin section{
     padding:$paddingsection;
+}
+
+@mixin resto{
+    background-color: $background-color;
+    padding-top:20px;
+    padding-bottom: 40px;
+}
+
+@mixin nouveau{
+    float: right;
+    background-color: $tertiaire;
+    border-radius: 2px;
+    padding: 5px 8px 5px 8px;
+    margin-top: -140px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    position: relative;
+    font-weight: bold;
+    color:rgb(19,146,115);
+}
+
+@mixin container{
+    display: flex;
+    height:22.5%;
+    width:$widthdiv;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+@mixin carte{
+    height: 220px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius: 15px;
+}
+
+@mixin footer{
+    padding:20px 0px 10px 20px;
+    background-color: #454545;
+    color: white;
 }

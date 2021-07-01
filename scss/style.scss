@@ -8,12 +8,33 @@ body {
   width:100%;
   margin:0;
 }
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
 h3{
   font-size: $fontsize;
 }
+
 header{
-  background-color: #eeeeeebc;
+  background-color: $background-color;
   font-size: $fontsize;
+}
+
+.fa-heart:before {
+  content: "\f004";
+  font-size: 1.4rem;
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+  margin-left: -50px;
 }
 
 .title {
@@ -36,12 +57,14 @@ header{
   flex-direction: column;
   align-items: center;
   height: 250px;
-  .btn{
-    @include btn;
-  }
+  justify-content: space-evenly;
   p{
     align-items: center;
   }
+}
+
+.btn{
+  @include btn;
 }
 
 .fonction{
@@ -50,11 +73,6 @@ header{
 }
 .containmenu{
   @include containmenu;
-}
-
-.fa-bars:before {
-  content: "\f0c9";
-  margin-left: -50px;
 }
 
 .menuh3{
@@ -70,7 +88,7 @@ header{
   i{
     margin-left: 20px;
     margin-right: 30px;
-    color:$grey;
+    color:grey;
   }
   p{
     @include pcolor;
@@ -87,6 +105,53 @@ section{
   @include section;
 }
 
-.resto img {
+.resto{
+  @include resto;
+}
+
+.container{
+  @include container;
+  img {
   @include img--size;
+  }
+}
+
+.carte{
+  @include carte;
+  span{
+    @include nouveau;
+  }
+  h3{
+    margin-left: 10px;
+    color:black;
+  }
+  p{
+   margin-top:-10px;
+   margin-left: 10px;
+   color: black;
+  }
+  i{
+    float: right;
+    margin-top: -50px;
+    margin-right: 20px;
+    color: black;
+  }
+}
+
+.fa-utensils:before {
+  content: "\f2e7";
+  margin-right: 7px;
+}
+
+footer{
+  @include footer;
+  i{
+    font-size: 15px;
+  }
+  p{
+    font-family: shrikhand;
+  }
+  ul{
+    line-height: 1.5em;
+  }
 }
