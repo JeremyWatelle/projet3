@@ -1,11 +1,10 @@
 @mixin btn { 
-    background-color: rgb(200,103,219);
+    background: linear-gradient(to bottom right,#ff39da,#9356dc);
     border-radius: $radiusdiv;
     padding: $paddingbtn;
     color: white;
     width: 60%;
     border: none;
-    
 }
 
 @mixin img--size {
@@ -28,6 +27,7 @@
     padding-bottom:5px;
     border-bottom: 2px solid #D2D2D2;
 }
+
 @mixin map{
     display:flex;
   align-items: center;

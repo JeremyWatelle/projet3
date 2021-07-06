@@ -92,7 +92,8 @@ header {
 }
 
 .btn {
-  background-color: #c867db;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff39da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff39da, #9356dc);
   border-radius: 20px;
   padding: 3.5%;
   color: white;
@@ -308,14 +309,16 @@ footer li {
 }
 
 .repas {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  height: 200px;
 }
 
 .plat {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
+  height: 60px;
+  line-height: 0.6rem;
+  padding-top: 5px;
+  padding-left: 8px;
 }
 
 .plat h2 {
@@ -328,5 +331,9 @@ footer li {
 
 .plat i {
   float: right;
+}
+
+.divbtn {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

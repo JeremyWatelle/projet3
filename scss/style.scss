@@ -199,12 +199,16 @@ footer{
 }
 
 .repas{
-  justify-content: space-evenly;
+  height: 200px;
 }
 
 .plat{
   background-color: white;
-  border-radius: $radiusdiv;
+  border-radius: 10px;
+  height: 60px;
+  line-height: 0.6rem;
+  padding-top: 5px;
+  padding-left: 8px;
   h2{
     font-size: 1rem;
   }
@@ -214,4 +218,8 @@ footer{
   i{
     float: right;
   }
+}
+
+.divbtn{
+  text-align: center;
 }
