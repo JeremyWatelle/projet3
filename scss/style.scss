@@ -180,14 +180,18 @@ footer{
 
 .img-menu{
   width: $sizeimage;
+  height: 250px;
+  object-fit: cover;
   position: relative;
 }
 
 .menucontain{
   background-color: $background-color ;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   margin-top: -30px;
   padding-left: 10px;
+  height: 1100px;
   position: relative;
 }
 
@@ -198,8 +202,16 @@ footer{
   font-family: shrikhand;
 }
 
+.titre{
+
+}
+
 .repas{
-  height: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
 }
 
 .plat{
@@ -209,6 +221,7 @@ footer{
   line-height: 0.6rem;
   padding-top: 5px;
   padding-left: 8px;
+  box-shadow: $shadowdiv;
   h2{
     font-size: 1rem;
   }
@@ -222,4 +235,5 @@ footer{
 
 .divbtn{
   text-align: center;
+  margin-top: 40px;
 }
