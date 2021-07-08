@@ -1,10 +1,11 @@
 @mixin btn { 
     background: linear-gradient(to bottom right,#ff39da,#9356dc);
     border-radius: $radiusdiv;
-    padding: $paddingbtn;
     color: white;
-    width: 60%;
+    width: 180px;
+    height: 40px;
     border: none;
+    box-shadow: $shadowdiv;
 }
 
 @mixin img--size {
@@ -23,8 +24,8 @@
 
 @mixin title{
     background-color: #fff;
-    padding-top: 10px;
-    padding-bottom:5px;
+    padding-top: 20px;
+    padding-bottom:10px;
     border-bottom: 2px solid #D2D2D2;
 }
 
@@ -62,7 +63,11 @@
 @mixin pcolor{
     border-radius: $radiusdiv;
     background-color: $primary;
-    padding:2px 6px 1px 6px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     overflow:hidden;
     margin-left: -10px;
     color: white;
@@ -86,6 +91,7 @@
     padding: 5px 8px 5px 8px;
     font-size: 0.8rem;
     position: absolute;
+    box-shadow: $shadowdiv;
     top: 10px;
     right: 10px;
     font-weight: bold;
@@ -105,6 +111,7 @@
     height: 220px;
     margin-bottom: 20px;
     position: relative;
+    box-shadow: $shadowdiv;
     background-color: white;
     border-radius:$radiusdiv;
 }
