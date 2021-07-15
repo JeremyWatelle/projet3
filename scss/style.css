@@ -367,10 +367,8 @@ section h2 {
   right: 10px;
   font-weight: bold;
   color: #139273;
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  -webkit-animation: scale-nouveau infinite 1.2s;
+          animation: scale-nouveau infinite 1.2s;
 }
 
 .carte h3 {
@@ -398,6 +396,28 @@ section h2 {
           transform: scale(1.15);
   background: -webkit-gradient(linear, left top, right bottom, from(#ff39da), to(#9356dc));
   background: linear-gradient(to bottom right, #ff39da, #9356dc);
+}
+
+@-webkit-keyframes scale-nouveau {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes scale-nouveau {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .fa-utensils:before {
