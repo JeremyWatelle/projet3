@@ -10,22 +10,29 @@ body {
 }
 
 .spin{
-  position: absolute;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: visibility 2s;
 }
 
-.spin::before{
-  content: "";
-  height: 2000px;
-  width: 100%;
-  margin-top: -600px;
-  overflow: hidden;
-  z-index: 1;
-  background: #0b0b0b;
-  opacity: 0.6;
-  position: absolute;
-  animation: back-spin 3s linear forwards;
+.loader-spin{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes back-spin{
@@ -38,19 +45,18 @@ body {
 }
 
 .spin::after{
-  box-sizing: border-box;
-  z-index: 2;
   content: "";
   position: absolute;
-  top: -35%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #3498db;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spinner 3s linear forwards;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #e2e2e2;
+  border-radius: 200px;
+  border-top-color: #000;
+  border-bottom-color: #9356dc;
+  animation: spinner 2s linear infinite;
 }
 
 @keyframes spinner{
@@ -90,6 +96,10 @@ header{
 .fa-bars:before {
   content: "\f0c9";
   margin-left: -50px;
+}
+
+.fa-list-ul,.fa-mobile-alt{
+  width: 19px;
 }
 
 .title {
@@ -195,6 +205,7 @@ section{
   @include carte;
   span{
     @include nouveau;
+    transition: transform 2s;
   }
   h3{
     margin-left: 10px;
@@ -210,12 +221,12 @@ section{
     margin-top: -50px;
     margin-right: 20px;
     color: black;
-    transition: transform 400ms;
+    transition: all 0.3s linear 0s;
     &:hover{
       transform: scale(1.15);
-      color:#ff39da;
+      background: linear-gradient(to bottom right,#ff39da,#9356dc);
     }
-  }
+    }
 }
 
 .fa-utensils:before {
@@ -269,6 +280,12 @@ footer{
   height: 1100px;
   position: relative;
   padding-bottom: 40px;
+  .fa-heart{
+    &:hover{
+      transform: scale(1.15);
+      background: linear-gradient(to bottom right,#ff39da,#9356dc);
+    }
+  }
 }
 
 .menutitle{
@@ -276,10 +293,6 @@ footer{
   align-items: center;
   justify-content: space-between;
   font-family: shrikhand;
-}
-
-.titre{
-
 }
 
 .repas{
@@ -314,25 +327,39 @@ footer{
   p{
     font-size: 0.9rem;
   }
-  i{
-    float: right;
-    color:#fff;
-    background-color: $tertiaire;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 50px;
-    height: 65px;
-    display: flex;
-    margin-top: -65px;
-    justify-content: center;
-    align-items: center;
-    animation: transition-check 2s forwards;
-    &:hover{
-      
-    }
-  }
   strong{
     float: right;
+  }
+  i{
+    display: none;
+  }
+  &:hover{
+    i{
+      float: right;
+      color:#fff;
+      background-color: $tertiaire;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 50px;
+      height: 65px;
+      display: flex;
+      margin-top: -65px;
+      justify-content: center;
+      align-items: center;
+      animation: transition-check 1s forwards;
+    }
+    strong{
+      animation: transition-price 1s forwards;
+    }
+  }
+}
+
+@keyframes transition-price{
+  from{
+    transform: translate3d(-80%,0,0);
+  }
+  to{
+    transform: translate3d(-220%,0,0);
   }
 }
 
