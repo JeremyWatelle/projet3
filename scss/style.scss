@@ -223,10 +223,20 @@ section{
     color: black;
     transition: all 0.3s linear 0s;
     &:hover{
-      transform: scale(1.15);
-      background: linear-gradient(to bottom right,#ff39da,#9356dc);
+      animation: heart forwards 1s;
     }
     }
+}
+
+@keyframes heart{
+  from{
+    background: white;
+    transform: scaleY(0);
+  }
+  to{
+    background: linear-gradient(to bottom,#ff39da,#9356dc);
+    transform: scaleY(1);
+  }
 }
 
 @keyframes scale-nouveau {
@@ -321,31 +331,79 @@ footer{
   
 }
 
+.delay-1{
+  animation-delay: 1s;
+}
+.delay-2{
+  animation-delay: 2s;
+}
+.delay-3{
+  animation-delay: 3s;
+}
+
 .plat{
   background-color: white;
+  display: flex;
+  flex-flow: row wrap;
   border-radius: 10px;
   height: 60px;
+  align-items: center;
   line-height: 0.6rem;
   padding-top: 5px;
   padding-left: 8px;
   box-shadow: $shadowdiv;
   text-overflow: ellipsis;
+  overflow: hidden;
+  animation: apparition 0s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  transform: scale(0);
   h2{
     font-size: 1rem;
+    text-overflow: ellipsis;
+    line-height: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
   }
   p{
     font-size: 0.9rem;
+    line-height: 0.9rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   strong{
     float: right;
   }
   i{
-    display: none;
+   
   }
   &:hover{
-    i{
-      float: right;
-      color:#fff;
+    p{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    strong{
+      animation: transition-price 1s forwards;
+    }
+  }
+}
+
+.plat_desc{
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
+}
+
+.plat_icon{
+  width: 20%;
+  height: 100%;
+  display: none;
+  &:hover{
+    color:#fff;
       background-color: $tertiaire;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -356,10 +414,31 @@ footer{
       justify-content: center;
       align-items: center;
       animation: transition-check 1s forwards;
-    }
-    strong{
-      animation: transition-price 1s forwards;
-    }
+  }
+}
+
+@keyframes apparition{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{ 
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+.price{
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  justify-content: flex-end;
+  padding-left: 10px;
+  &:hover{
+    animation: transition-price 1s forwards;
   }
 }
 
