@@ -379,13 +379,13 @@ section h2 {
   margin-top: -50px;
   margin-right: 20px;
   color: black;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
+  background-clip: border-box;
 }
 
 .carte i:hover {
   -webkit-animation: heart forwards 1s;
           animation: heart forwards 1s;
+  background-clip: border-box;
 }
 
 footer {
@@ -446,17 +446,6 @@ footer li {
   padding-bottom: 40px;
 }
 
-.menucontain .fa-heart:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff39da), to(#9356dc));
-  background: linear-gradient(to bottom right, #ff39da, #9356dc);
-}
-
-.menu_icon {
-  border: 2px solid #9356dc;
-}
-
 .menutitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,6 +461,30 @@ footer li {
 
 .repas {
   height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menucontain-note {
+  background-color: #f6f6f6;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -30px;
+  padding-left: 10px;
+  height: 1150px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.repas-note {
+  height: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,28 +737,30 @@ footer li {
 @-webkit-keyframes heart {
   from {
     background: white;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
     background: -webkit-gradient(linear, left top, left bottom, from(#ff39da), to(#9356dc));
     background: linear-gradient(to bottom, #ff39da, #9356dc);
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    background-clip: border-box;
   }
 }
 
 @keyframes heart {
   from {
     background: white;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   to {
     background: -webkit-gradient(linear, left top, left bottom, from(#ff39da), to(#9356dc));
     background: linear-gradient(to bottom, #ff39da, #9356dc);
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    background-clip: border-box;
   }
 }
 
@@ -786,6 +801,26 @@ footer li {
   }
   to {
     opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .containmenu {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu {
+    width: 50%;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .carte {
+    width: 45%;
   }
 }
 /*# sourceMappingURL=style.css.map */
