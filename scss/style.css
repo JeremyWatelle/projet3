@@ -805,6 +805,15 @@ footer li {
 }
 
 @media only screen and (min-width: 700px) {
+  .reserve {
+    height: 180px;
+  }
+  .reserve h2 {
+    width: auto;
+  }
+  .reserve p {
+    width: auto;
+  }
   .containmenu {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -821,6 +830,13 @@ footer li {
   }
   .carte {
     width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .title img {
+    width: 20%;
+    margin-left: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */
