@@ -135,7 +135,7 @@ header{
 
 .btn{
   @include btn;
-  transition: transform 400ms;
+  transition: 400ms;
   &:hover{
     transform:scale(1.15) ;
     box-shadow: 2px 4px 0px rgb(214, 214, 214);
@@ -422,7 +422,6 @@ footer{
     opacity: 0;
   }
   50%{
-    transform: translateY();
     opacity: 0.5;
   }
   100%{ 

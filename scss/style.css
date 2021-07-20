@@ -201,10 +201,8 @@ header {
   border: none;
   -webkit-box-shadow: 2px 2px 10px #d6d6d6;
           box-shadow: 2px 2px 10px #d6d6d6;
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition: 400ms;
+  transition: 400ms;
 }
 
 .btn:hover {
@@ -657,8 +655,6 @@ footer li {
     opacity: 0;
   }
   50% {
-    -webkit-transform: translateY();
-            transform: translateY();
     opacity: 0.5;
   }
   100% {
@@ -675,8 +671,6 @@ footer li {
     opacity: 0;
   }
   50% {
-    -webkit-transform: translateY();
-            transform: translateY();
     opacity: 0.5;
   }
   100% {
