@@ -1,6 +1,6 @@
-@import "1.Utils/variables.scss";
-@import "1.Utils/fonctions.scss";
-@import "1.Utils/mixin.scss";
+@import "1.Utils/_variables.scss";
+@import "1.Utils/_fonctions.scss";
+@import "1.Utils/_mixin.scss";
 
 body {
   font-family: roboto, shrikhand;
@@ -228,10 +228,14 @@ section{
     margin-top: -50px;
     margin-right: 20px;
     color: black;
-    &:hover{
-      animation: heart forwards 1s;
-      background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &:hover,
+    &:focus{
+      background: #ff39da;
+      background: linear-gradient(to bottom,#ff39da 0%,#9356dc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      animation: heart ease-out 400ms;
     }
     }
 }
@@ -293,10 +297,19 @@ footer{
   font-family: shrikhand;
 }
 
-.menu_icon:hover{
-  animation: heart forwards 1s;
+.menu_icon:hover,
+.menu_icon:focus{
+ 
   background-clip: text;
-  -webkit-text-fill-color: transparent
+  -webkit-text-fill-color: transparent;
+  i{
+    background: #ff39da;
+    background: linear-gradient(to bottom,#ff39da 0%,#9356dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: heart ease-out 1s;
+  }
 }
 
 .repas{
@@ -376,7 +389,6 @@ footer{
 }
 
 .titre{
-  border-bottom: 2px solid $tertiaire;
   position: relative;
 }
 .titre::after{
@@ -384,11 +396,11 @@ footer{
   margin: 0;
   display: block;
   content: "";
-  width: 86%;
-  background-color: $background-color;
+  width: 50px;
+  background-color: $tertiaire;
   position: absolute;
-  height: 2.1px;
-  right: 0;
+  height: 2px;
+  left: 0;
 }
 
 .plat_desc{
@@ -482,13 +494,14 @@ footer{
 
 @keyframes heart{
   from{
-    background: white;
-    transform: scale(1);
+    transition:ease-out ;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
   }
   to{
-    background: linear-gradient(to bottom,#ff39da,#9356dc);
-    transform: scale(1.3);
-  
+    opacity: 1;
   }
 }
 
@@ -537,9 +550,6 @@ footer{
   }
   .menucontain{
     height: 750px;
-  }
-  .titre::after{
-    width: 90%;
   }
   .repas-note{
     flex-flow: row wrap;
@@ -612,6 +622,5 @@ footer{
   .titre{
     bottom: 60px;
     left: 170px;
-    border: none;
   }
 }

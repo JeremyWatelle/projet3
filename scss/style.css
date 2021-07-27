@@ -470,11 +470,22 @@ footer a {
   font-family: shrikhand;
 }
 
-.menu_icon:hover {
-  -webkit-animation: heart forwards 1s;
-          animation: heart forwards 1s;
+.menu_icon:hover,
+.menu_icon:focus {
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.menu_icon:hover i,
+.menu_icon:focus i {
+  background: #121FCF;
+  background: -webkit-gradient(linear, left top, right top, from(#121FCF), to(#CF1512));
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
 }
 
 .repas {
@@ -588,7 +599,6 @@ footer a {
 }
 
 .titre {
-  border-bottom: 2px solid #99e2d0;
   position: relative;
 }
 
@@ -597,11 +607,11 @@ footer a {
   margin: 0;
   display: block;
   content: "";
-  width: 86%;
-  background-color: #f6f6f6;
+  width: 50px;
+  background-color: #99e2d0;
   position: absolute;
-  height: 2.1px;
-  right: 0;
+  height: 2px;
+  left: 0;
 }
 
 .plat_desc {
