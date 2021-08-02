@@ -222,10 +222,8 @@ header {
 .fonction {
   padding-top: 20px;
   padding-bottom: 40px;
-}
-
-.fonction h2 {
-  margin-left: -5px;
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 .containmenu {
@@ -240,6 +238,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 200px;
+  max-width: 1240px;
 }
 
 .menuh3 {
@@ -313,14 +312,22 @@ section h2 {
   padding-bottom: 40px;
 }
 
+.resto h2 {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding-bottom: 40px;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 22.5%;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  max-width: 1240px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -425,6 +432,19 @@ footer a {
   color: white;
 }
 
+.piedpage {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,7 +475,6 @@ footer a {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
-  padding-left: 10px;
   position: relative;
   padding-bottom: 40px;
 }
@@ -472,7 +491,8 @@ footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 5px;
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 .menu_icon:hover,
@@ -511,9 +531,17 @@ footer a {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
-  padding-left: 10px;
   position: relative;
   padding-bottom: 40px;
+}
+
+.contain-repas {
+  margin: 0 auto;
+  max-width: 1240px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .repas-note {
@@ -606,7 +634,6 @@ footer a {
 
 .titre {
   position: relative;
-  margin-left: 5px;
 }
 
 .titre::after {
@@ -872,11 +899,6 @@ footer a {
   .menu {
     width: 50%;
   }
-  .menutitle {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
   .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -921,6 +943,7 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-left: 10px;
   }
   .img-menu {
     height: 400px;
@@ -928,24 +951,19 @@ footer a {
   .menu {
     width: 30%;
   }
-  .menutitle {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding-bottom: 20px;
-  }
   .resto {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
-  .resto h2 {
-    margin-left: 12px;
   }
   .menucontain {
     margin-top: 0;
     border-radius: 0px;
     padding-top: 40px;
     padding-bottom: 80px;
+  }
+  .menucontain-note {
+    padding-top: 40px;
+    border-radius: 0px;
   }
   .carte {
     width: 32%;
@@ -962,10 +980,16 @@ footer a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    width: 100%;
+  }
+  .piedpage {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .logo {
     width: 20%;
@@ -982,9 +1006,8 @@ footer a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 30px;
+    height: 380px;
   }
   .repas {
     height: 250px;
@@ -1000,10 +1023,6 @@ footer a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-  .titre {
-    bottom: 60px;
-    left: 170px;
   }
   .titre::after {
     height: 4px;

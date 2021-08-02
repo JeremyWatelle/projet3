@@ -1,5 +1,4 @@
 @import "1.Utils/_variables.scss";
-@import "1.Utils/_fonctions.scss";
 @import "1.Utils/_mixin.scss";
 
 body {
@@ -151,13 +150,16 @@ header{
 .fonction{
   padding-top:20px;
   padding-bottom: 40px;
-  h2{
-    margin-left:-5px;
-  }
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 .containmenu{
-  @include containmenu;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:200px;
+  max-width: 1240px;
 }
 
 .menuh3{
@@ -194,11 +196,23 @@ section{
 }
 
 .resto{
-  @include resto;
+  background-color: $background-color;
+  padding-top:20px;
+  padding-bottom: 40px;
+  h2{
+    margin: 0 auto;
+    max-width: $max-width;
+    padding-bottom: 40px;
+  }
 }
 
 .container{
-  @include container;
+    display: flex;
+    width:$widthdiv;
+    max-width: $max-width;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-direction: column;
   img {
   @include img--size;
   }
@@ -259,6 +273,14 @@ footer{
   }
 }
 
+.piedpage{
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .header-menu{
   display: flex;
   align-items: center;
@@ -284,7 +306,6 @@ footer{
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
-  padding-left: 10px;
   position: relative;
   padding-bottom: 40px;
 }
@@ -295,7 +316,8 @@ footer{
   font-family: shrikhand;
   font-size: 0.9rem;
   justify-content: space-between;
-  margin-left: 5px;
+  margin:0 auto;
+  max-width: 1240px;
 }
 
 .menu_icon:hover,
@@ -325,9 +347,14 @@ footer{
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   margin-top: -30px;
-  padding-left: 10px;
   position: relative;
   padding-bottom: 40px;
+}
+
+.contain-repas{
+  margin: 0 auto;
+  max-width: $max-width;
+  flex-flow: column wrap;
 }
 
 .repas-note{
@@ -392,7 +419,6 @@ footer{
 
 .titre{
   position: relative;
-  margin-left: 5px;
 }
 .titre::after{
   padding: 0;
@@ -546,9 +572,6 @@ footer{
   .menu{
     width:50%
   }
-  .menutitle{
-    justify-content: space-between;
-  }
   .container{
     flex-flow: row wrap;
   }
@@ -579,6 +602,7 @@ footer{
   }
   .containmenu{
     flex-direction: row;
+    padding-left: 10px;
   }
   .img-menu{
     height: 400px;
@@ -586,22 +610,19 @@ footer{
   .menu{
     width: 30%;
   }
-  .menutitle{
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-  }
   .resto{
     padding-top: 60px;
     padding-bottom: 60px;
-    h2{
-      margin-left: 12px;
-    }
   }
   .menucontain{
     margin-top: 0;
     border-radius: 0px;
     padding-top: 40px;
     padding-bottom: 80px;
+  }
+  .menucontain-note{
+    padding-top: 40px;
+    border-radius: 0px;
   }
   .carte{
     width: 32%;
@@ -611,9 +632,12 @@ footer{
     justify-content: center;
     ul{
       display: flex;
-      width: 80%;
       justify-content: space-evenly;
+      width: 100%;
     }
+  }
+  .piedpage{
+    flex-direction: row;
   }
   .logo{
     width: 20%;
@@ -628,8 +652,8 @@ footer{
   }
   .contain-repas{
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 30px;
+    height: 380px;
   }
   .repas{
     height: 250px;
@@ -642,11 +666,7 @@ footer{
     width: 350px;
     justify-content: flex-start;
   }
-  .titre{
-    bottom: 60px;
-    left: 170px;
-    &::after{
+  .titre::after{
       height: 4px;
     }
-  }
 }
