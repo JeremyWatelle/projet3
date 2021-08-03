@@ -322,8 +322,7 @@ footer{
 
 .menu_icon:hover,
 .menu_icon:focus{
- 
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   i{
     background: #ff39da;
