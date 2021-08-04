@@ -23,9 +23,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  visibility: hidden;
-  -webkit-transition: visibility 2s;
-  transition: visibility 2s;
+  -webkit-animation: back-spin 2s ease-in-out forwards;
+          animation: back-spin 2s ease-in-out forwards;
 }
 
 .loader-spin {
@@ -64,6 +63,28 @@ body {
   border-bottom-color: #9356dc;
   -webkit-animation: spinner 2s linear infinite;
           animation: spinner 2s linear infinite;
+}
+
+@-webkit-keyframes back-spin {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes back-spin {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @-webkit-keyframes spinner {
@@ -443,6 +464,7 @@ footer a {
 
 .logo {
   width: 45%;
+  max-height: 70px;
   padding-top: 5px;
   margin-left: 20%;
 }
@@ -825,24 +847,6 @@ footer a {
   }
 }
 
-@-webkit-keyframes back-spin {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes back-spin {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 @media only screen and (min-width: 650px) {
   .reserve h2 {
     width: auto;
@@ -875,10 +879,10 @@ footer a {
     width: 45%;
   }
   .repas {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

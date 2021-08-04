@@ -20,8 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-  transition: visibility 2s;
+  animation: back-spin 2s ease-in-out forwards;
 }
 
 .loader-spin{
@@ -47,6 +46,17 @@ body {
   border-top-color: #000;
   border-bottom-color: #9356dc;
   animation: spinner 2s linear infinite;
+}
+
+@keyframes back-spin{
+  from{
+    opacity: 1;
+    display: block;
+  }
+  to{
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes spinner{
@@ -279,6 +289,7 @@ footer{
 
 .logo{
   width: 45%;
+  max-height: 70px;
   padding-top: 5px;
   margin-left: 20%;
 }
@@ -515,15 +526,6 @@ footer{
   }
 }
 
-@keyframes back-spin{
-  from{
-    opacity: 1;
-  }
-  to{
-    opacity:0;
-  }
-}
-
 @media only screen and (min-width:650px) {
   .reserve{
     h2{
@@ -553,7 +555,7 @@ footer{
     width:45%;
   }
   .repas{
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-between;
   }
   .plat{
