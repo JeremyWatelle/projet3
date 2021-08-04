@@ -238,6 +238,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 200px;
+  padding-left: 10px;
   max-width: 1240px;
 }
 
@@ -949,7 +950,6 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-left: 10px;
   }
   .img-menu {
     height: 400px;

@@ -159,6 +159,7 @@ header{
   flex-direction: column;
   justify-content: space-between;
   height:200px;
+  padding-left: 10px;
   max-width: 1240px;
 }
 
@@ -604,7 +605,6 @@ footer{
   }
   .containmenu{
     flex-direction: row;
-    padding-left: 10px;
   }
   .img-menu{
     height: 400px;
