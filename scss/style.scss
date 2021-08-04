@@ -60,6 +60,12 @@ body {
   }
 }
 
+.container{
+  width: 95%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
 a{
   text-decoration: none;
 }
@@ -118,15 +124,9 @@ header{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 250px;
   justify-content: center;
-  h2{
-    width: 250px;
-    margin:0;
-  }
-  p{
-    width:300px;
-  }
+  padding-top: 40px;
+  padding-bottom: 40px;
   button{
     margin-top: 10px;
   }
@@ -148,19 +148,18 @@ header{
 }
 
 .fonction{
-  padding-top:20px;
+  padding-top:40px;
   padding-bottom: 40px;
-  margin: 0 auto;
-  max-width: 1240px;
+  & h2{
+    margin-bottom: 30px;
+  }
 }
 
 .containmenu{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height:200px;
   padding-left: 10px;
-  max-width: 1240px;
 }
 
 .menuh3{
@@ -189,29 +188,18 @@ header{
   }
 }
 
-section{
-  @include section;
-  h2{
+section h2{
     font-size: 1.2em;
-  }
 }
 
 .resto{
   background-color: $background-color;
   padding-top:20px;
   padding-bottom: 40px;
-  h2{
-    margin: 0 auto;
-    max-width: $max-width;
-    padding-bottom: 40px;
-  }
 }
 
-.container{
+.container-carte{
     display: flex;
-    width:$widthdiv;
-    max-width: $max-width;
-    margin: 0 auto;
     justify-content: space-between;
     flex-direction: column;
   img {
@@ -277,7 +265,7 @@ footer{
 .piedpage{
   max-width: $max-width;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
 }
@@ -317,8 +305,6 @@ footer{
   font-family: shrikhand;
   font-size: 0.9rem;
   justify-content: space-between;
-  margin:0 auto;
-  max-width: 1240px;
 }
 
 .menu_icon:hover,
@@ -336,32 +322,14 @@ footer{
 }
 
 .repas{
-  height: 250px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-
-.menucontain-note{
-  background-color: $background-color ;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  margin-top: -30px;
-  position: relative;
-  padding-bottom: 40px;
 }
 
 .contain-repas{
-  margin: 0 auto;
-  max-width: $max-width;
   flex-flow: column wrap;
-}
-
-.repas-note{
-  height: 330px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .plat{
@@ -381,6 +349,7 @@ footer{
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   transform: scale(0);
+  margin-bottom: 15px;
   h2{
     font-size: 1rem;
     text-overflow: ellipsis;
@@ -557,7 +526,6 @@ footer{
 
 @media only screen and (min-width:650px) {
   .reserve{
-    height: 180px;
     h2{
       width: auto;
     }
@@ -575,24 +543,21 @@ footer{
   .menu{
     width:50%
   }
-  .container{
+  .titre{
+    width: 100%;
+  }
+  .container-carte{
     flex-flow: row wrap;
   }
   .carte{
     width:45%;
   }
-  .repas-note{
-    flex-flow: row wrap;
-    height: 200px;
-    justify-content: space-between;
-  }
   .repas{
     flex-flow: row wrap;
-    height: 150px;
     justify-content: space-between;
   }
   .plat{
-    width:300px ;
+    width:48%;
   }
   
 }
@@ -612,6 +577,10 @@ footer{
   .menu{
     width: 30%;
   }
+  .fonction{
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
   .resto{
     padding-top: 60px;
     padding-bottom: 60px;
@@ -621,10 +590,6 @@ footer{
     border-radius: 0px;
     padding-top: 40px;
     padding-bottom: 80px;
-  }
-  .menucontain-note{
-    padding-top: 40px;
-    border-radius: 0px;
   }
   .carte{
     width: 32%;
@@ -645,29 +610,22 @@ footer{
     width: 20%;
     margin-left:38%;
   }
-  .fonction{
-    padding-top:0;
-    padding-bottom: 0;
-  }
   .plat{
-    width: 300px;
+    width: 100%;
+    margin-bottom: 30px;
   }
   .contain-repas{
     display: flex;
     margin-top: 30px;
-    height: 380px;
-    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+    & > div{
+      width: 31%;
+    }
   }
   .repas{
-    height: 250px;
     justify-content: flex-start;
     margin-bottom: 40px;
-    width: 350px;
-  }
-  .repas-note{
-    height: 300px;
-    width: 350px;
-    justify-content: flex-start;
   }
   .titre::after{
       height: 4px;
