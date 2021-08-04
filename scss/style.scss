@@ -249,7 +249,7 @@ section{
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
-      animation: heart ease-out 400ms;
+      animation: heart ease-out 1s;
     }
     }
 }
@@ -523,13 +523,16 @@ footer{
 @keyframes heart{
   from{
     transition:ease-out ;
-    opacity: 0.2;
+    font-weight: 200;
   }
-  50%{
-    opacity: 0.6;
+  30%{
+    font-weight: 400;
+  }
+  60%{
+    font-weight: 600;
   }
   to{
-    opacity: 1;
+    font-weight: 900;
   }
 }
 
