@@ -1014,6 +1014,8 @@ footer a {
     display: flex;
     margin-top: 30px;
     height: 380px;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
   .repas {
     height: 250px;
