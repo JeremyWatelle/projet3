@@ -394,6 +394,9 @@ footer{
     .price{
       animation: transition-price 1s forwards;
     }
+    i{
+      animation: rotation-check 1s forwards ease-in-out;
+    }
   }
 }
 
@@ -465,6 +468,15 @@ footer{
 }
 .delay-9{
   animation-delay: 3s;
+}
+
+@keyframes rotation-check{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes apparition{
@@ -555,7 +567,7 @@ footer{
     width:45%;
   }
   .repas{
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
   .plat{
@@ -628,6 +640,7 @@ footer{
   .repas{
     justify-content: flex-start;
     margin-bottom: 40px;
+    flex-flow: column wrap;
   }
   .titre::after{
       height: 4px;

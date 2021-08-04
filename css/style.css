@@ -614,6 +614,11 @@ footer a {
           animation: transition-price 1s forwards;
 }
 
+.plat:hover i {
+  -webkit-animation: rotation-check 1s forwards ease-in-out;
+          animation: rotation-check 1s forwards ease-in-out;
+}
+
 .titre {
   position: relative;
 }
@@ -709,6 +714,28 @@ footer a {
 .delay-9 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+}
+
+@-webkit-keyframes rotation-check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotation-check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 
 @-webkit-keyframes apparition {
@@ -879,10 +906,10 @@ footer a {
     width: 45%;
   }
   .repas {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -978,6 +1005,10 @@ footer a {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
   }
   .titre::after {
     height: 4px;
