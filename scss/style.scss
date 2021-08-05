@@ -135,7 +135,7 @@ header{
   align-items: center;
   text-align: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
   button{
     margin-top: 10px;
@@ -273,9 +273,6 @@ footer{
 }
 
 .piedpage{
-  max-width: $max-width;
-  margin: 0 auto;
-  width: 95%;
   display: flex;
   flex-direction: column;
 }
@@ -283,15 +280,15 @@ footer{
 .header-menu{
   display: flex;
   align-items: center;
-  margin-left: 20px;
-  padding: 10px 0px 10px 0px;
 }
 
 .logo{
-  width: 45%;
-  max-height: 70px;
-  padding-top: 5px;
-  margin-left: 20%;
+  max-height: 50px;
+  text-align: center;
+  font-family: shrikhand;
+  font-size: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .img-menu{
@@ -547,10 +544,6 @@ footer{
       width: auto;
     }
   }
-  .logo{
-    width: 40%;
-    margin-left: 27%;
-  }
   .containmenu{
     align-items: center;
   }
@@ -582,8 +575,17 @@ footer{
     width: 20%;
     margin-left: 40%;
   }
+  header{
+    max-height: 410px;
+  }
+  .reserve{
+    padding-bottom: 80px;
+  }
   .containmenu{
     flex-direction: row;
+  }
+  .container{
+    width: 100%;
   }
   .img-menu{
     height: 400px;
@@ -619,10 +621,6 @@ footer{
   }
   .piedpage{
     flex-direction: row;
-  }
-  .logo{
-    width: 20%;
-    margin-left:38%;
   }
   .plat{
     width: 100%;
