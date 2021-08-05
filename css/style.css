@@ -161,6 +161,12 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #D2D2D2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title img {

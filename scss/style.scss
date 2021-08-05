@@ -115,7 +115,12 @@ header{
 }
 
 .title {
-    @include title;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-bottom: 2px solid #D2D2D2;
+    display: flex;
+    align-items: center;
     img{
     width:45%;
     margin-left:28%;
